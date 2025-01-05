@@ -1,0 +1,131 @@
+/* General Reset */
+* {
+    color: #2C3E50;
+    font-family: 'Arial', sans-serif;
+    transition: 0.3s ease-in-out;
+    user-select: none;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+    background: linear-gradient(135deg, #6A82FB, #FC5C7D); /* Gradient background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Turn Container Styles */
+.turn-container {
+    width: 180px;
+    height: 90px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    background: #88dca8;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.turn-container h3 {
+    margin: 0;
+    grid-column: 1 / span 2;
+    font-size: 1.2rem;
+    color: #34495E;
+}
+
+.turn-container .turn-box {
+    border: 2px solid #06b8ff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background: #8c89cf;
+    border-radius: 5px;
+    color: #2C3E50;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 45px;
+    background-color: #05dd78; /* Default */
+    border-radius: 5px;
+    z-index: -1;
+    transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+/* Main Grid Styles */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 300px;
+    width: 300px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #F2F2F2, #EAEAEA); /* Subtle grid background */
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.box {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid #feee07;
+    background: #eb71a0; /* Individual box background */
+    color: #2C3E50;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background-color: #60ea62; /* Hover color */
+    color: #fff;
+}
+
+.winning-box {
+    background: #6A82FB !important; /* Winning boxes highlighted */
+    color: #fff !important;
+}
+
+/* Results and Play Again Button */
+#results {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#play-again {
+    background-color: #FF6F61;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#play-again:hover {
+    background-color: #FF9770;
+    transform: scale(1.1);
+}
